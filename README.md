@@ -1,17 +1,17 @@
 Truth Lens – Fake News Detection System
 Overview
 
-Truth Lens is a machine learning-based web application built using Streamlit that detects whether a news article is fake or real. It uses natural language processing techniques and a trained machine learning model to analyze text and provide predictions with confidence scores.
+Truth Lens is a machine learning web application built using Streamlit that detects whether a news article is fake or real. The system uses natural language processing techniques and a trained machine learning model to analyze text and provide predictions with confidence scores.
 
-The purpose of this project is to help users identify misinformation and improve awareness in digital media.
+The main goal of this project is to help users identify misinformation and verify the authenticity of news content.
 
 Features
-AI-based fake news detection
-Confidence score for predictions
+Machine learning-based fake news detection
+Confidence score for each prediction
 Real-time text analysis
 Prediction history tracking
-Simple Streamlit interface
-Tab-based navigation (Home, About, Prediction)
+Simple and interactive Streamlit interface
+Multi-page navigation (Home, About, Prediction)
 Technologies Used
 Python
 Streamlit
@@ -25,33 +25,36 @@ fake-news-detection/
 ├── app.py                  Main Streamlit application
 ├── fake_news_model.pkl    Trained machine learning model
 ├── requirements.txt       Project dependencies
-└── README.md              Documentation file
+└── README.md              Project documentation
 How It Works
-User enters a news article in the input box
-Text is converted into numerical features using TF-IDF
-Machine learning model predicts whether the news is fake or real
-Confidence score is generated
-Result is displayed and stored in session history
-How to Run the Project
-Step 1: Install dependencies
+User enters a news article in the input field
+The text is processed using TF-IDF Vectorization
+The trained machine learning model analyzes the input
+The system predicts whether the news is fake or real
+A confidence score is displayed with the result
+The prediction is stored in session history
+Installation and Setup
+Step 1: Clone the repository
+git clone <your-repo-link>
+cd fake-news-detection
+Step 2: Install dependencies
 pip install streamlit joblib scikit-learn
-Step 2: Run the application
+Step 3: Run the application
 streamlit run app.py
 Model Details
 Algorithm: Logistic Regression
 Feature Extraction: TF-IDF Vectorizer
-Training Data: Labeled dataset of fake and real news
+Dataset: Labeled fake and real news articles
 Output: Binary classification (Fake or Real)
-Application Modules
+Application Pages
 Home Page
-Introduction to the project
-Overview of features
+
+Provides an introduction to the project and its purpose.
+
 About Page
-Explanation of machine learning model
-Technology stack used
-System description
+
+Explains the machine learning model, dataset, and technologies used.
+
 Prediction Page
-Input news text
-Prediction result
-Confidence score
-History of predictions
+
+Allows users to input news text, view prediction results, confidence score, and history of previous predictions.
